@@ -1,9 +1,7 @@
 # Playlister
----
 A web application for tracking playlists!
 
-# Frameworks
----
+## Frameworks
 Built with:
 * MongoDB
 * PyMongo
@@ -11,11 +9,10 @@ Built with:
 
 For full list of dependencies, see `requirements.txt`
 
-# Features
----
+## Features
 
-# Code Example
----
+## Code Example
+A snippet of heart of the framework setup.
 ```
 ...
 from pymongo import MongoClient
@@ -35,8 +32,6 @@ def playlists_index():
 ...
 ```
 
-# Installation
----
+## Installation
 
-# How to Use
----
+## How to Use
