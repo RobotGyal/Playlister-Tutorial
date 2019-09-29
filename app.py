@@ -19,7 +19,7 @@ def playlists_new():
     """Create a new playlist."""
     return render_template('playlists_new.html', playlists={}, title='New Playlist')
 
-#NEW PLAYLISTS
+#NEW PLAYLIST
 @app.route('/playlists', methods=['POST'])
 def playlists_submit():
     """Submit a new playlist."""
@@ -32,7 +32,7 @@ def playlists_submit():
     playlist_id = playlists.insert_one(playlist).inserted_id
     return redirect(url_for('playlists_show', playlist_id=playlist_id))
 
-#SHOWS PLAYLISTS
+#SHOWS SINGLE PLAYLIST
 @app.route('/playlists/<playlist_id>')
 def playlists_show(playlist_id):
     """Show a single playlist."""
