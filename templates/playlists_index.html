@@ -1,10 +1,43 @@
-<!-- templates/playlists_index.html -->
+<!-- templates/playlists_new.html -->
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Playlists</h1>
-    {% for playlist in playlists %}
-        <h2>{{ playlist.title }}</h2>
-        <small>{{ playlist.description }}</small>
-    {% endfor %}
+<form method='POST' action='/playlists'>
+    <fieldset>
+        <legend>New Playlist</legend>
+        <!-- TITLE -->
+        <p>
+            <label for='title'>Title</label><br>
+            <input type='text' name='title' />
+        </p>
+        <!--DESCRIPTION-->
+        <p>
+            <label for='description'>Description</label><br>
+            <input type='text' name='description' />
+        </p>
+        <!-- VIDEO LINKS -->
+        <p>
+            <label for='playlist-videos'>Videos</label><br>
+            <p>Add videos in the form of 'https://youtube.com/embed/KEY'. Separate with a newline.</p>
+            <textarea id='playlist-videos' name='videos' rows='10'></textarea>
+        </p>
+        <!--RATING-->
+        <p>
+            <label for='playlist-rating'>Rating</label><br>
+            <p>How would you rate this playlist?</p>
+            <select name='rating'>
+                <option value='1'>1 *</option>
+                <option value='2'>2 **</option>
+                <option value='3'>3 ***</option>
+                <option value='4'>4 ****</option>
+                <option value='5'>5 *****</option>
+            </select>
+        </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Playlist</button>
+    </p>
+</form>
 {% endblock %}
