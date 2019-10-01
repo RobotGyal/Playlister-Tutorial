@@ -17,7 +17,7 @@ def playlists_index():
 @app.route('/playlists/new')
 def playlists_new():
     """Create a new playlist."""
-    return render_template('playlists_new.html', playlists={}, title='New Playlist')
+    return render_template('playlists_new.html', playlist={}, title='New Playlist')
 
 #NEW PLAYLIST
 @app.route('/playlists', methods=['POST'])
